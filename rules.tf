@@ -2,15 +2,15 @@
 # Detection Rules
 # ──────────────────────────────────────────────
 # Each rule has two parts:
-#   1. A .yaral file in rules/  — the actual detection logic (YARA-L).
+#   1. A .yl2 file in rules/  — the actual detection logic (YARA-L).
 #   2. An entry in the map below — deployment settings.
 #
 # To add a rule:
-#   1. Write your YARA-L file in rules/my_rule.yaral
+#   1. Write your YARA-L file in rules/my_rule.yl2
 #   2. Add an entry to the map below.
 #
 # To edit detection logic:
-#   Just edit the .yaral file and open a PR.
+#   Just edit the .yl2 file and open a PR.
 #
 # To disable a rule without deleting it:
 #   Set enabled = false in the map below.
@@ -33,7 +33,7 @@ locals {
     # ── Add new rules here ──────────────────────
     #
     # my_new_rule = {
-    #   file      = "rules/my_new_rule.yaral"
+    #   file      = "rules/my_new_rule.yl2"
     #   enabled   = true
     #   alerting  = true
     # }
