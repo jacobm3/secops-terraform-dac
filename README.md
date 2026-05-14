@@ -20,9 +20,9 @@ merge.
 │   ├── ip_allowlist.csv
 │   └── vuln_priority.csv
 ├── rules.tf                # Rule config map + deployment settings
-├── rules/                  # One .yaral file per detection rule
-│   ├── login_from_blocked_country.yaral
-│   └── brute_force_login.yaral
+├── rules/                  # One .yl2 file per detection rule
+│   ├── dac_login_from_blocked_country.yl2
+│   └── dac_brute_force_login.yl2
 ├── outputs.tf              # Useful outputs
 ├── versions.tf             # Terraform & provider version pins
 ├── .github/
@@ -87,18 +87,18 @@ changed, or removed.
 
 ## Adding a detection rule
 
-1. Write your YARA-L rule in `rules/my_rule.yaral`.
+1. Write your YARA-L rule in `rules/my_rule.yl2`.
 2. Add an entry to the `local.rules` map in `rules.tf`:
    ```hcl
    my_rule = {
-     file      = "rules/my_rule.yaral"
+     file      = "rules/my_rule.yl2"
      enabled   = true
      alerting  = true
    }
    ```
 3. Open a PR, review the plan, merge.
 
-**To edit rule logic**, just edit the `.yaral` file. To **disable a rule**
+**To edit rule logic**, just edit the `.yl2` file. To **disable a rule**
 without removing it, set `enabled = false` in the map.
 
 ## GitHub Actions setup
