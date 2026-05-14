@@ -1,4 +1,4 @@
-rule dac_login_from_blocked_country {
+rule dac_demo_login_from_blocked_country {
   meta:
     author = "secops-team"
     description = "Detects logins originating from countries on the block list."

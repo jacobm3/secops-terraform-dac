@@ -19,13 +19,13 @@ locals {
   rules = {
 
     dac_login_from_blocked_country = {
-      file      = "rules/dac_login_from_blocked_country.yl2"
+      file      = "rules/login_from_blocked_country.yl2"
       enabled   = false
       alerting  = false
     }
 
     dac_brute_force_login = {
-      file      = "rules/dac_brute_force_login.yl2"
+      file      = "rules/brute_force_login.yl2"
       enabled   = false
       alerting  = false
     }
