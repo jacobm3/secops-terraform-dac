@@ -3,10 +3,10 @@
 # ──────────────────────────────────────────────
 # Maps CVEs to internal priority levels for alert triage.
 #
-# To update, edit data/vuln_priority.csv.
+# To update, edit tables/vuln_priority.csv.
 
 locals {
-  vuln_priority_rows = csvdecode(file("${path.module}/data/vuln_priority.csv"))
+  vuln_priority_rows = csvdecode(file("${path.module}/tables/vuln_priority.csv"))
 }
 
 resource "google_chronicle_data_table" "vuln_priority" {

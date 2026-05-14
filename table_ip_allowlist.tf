@@ -3,10 +3,10 @@
 # ──────────────────────────────────────────────
 # Trusted IP addresses that should not trigger alerts.
 #
-# To add/remove IPs, edit data/ip_allowlist.csv — no Terraform knowledge needed.
+# To add/remove IPs, edit tables/ip_allowlist.csv — no Terraform knowledge needed.
 
 locals {
-  ip_allowlist_rows = csvdecode(file("${path.module}/data/ip_allowlist.csv"))
+  ip_allowlist_rows = csvdecode(file("${path.module}/tables/ip_allowlist.csv"))
 }
 
 resource "google_chronicle_data_table" "ip_allowlist" {

@@ -2,7 +2,7 @@
 # Template: Add Your Own Data Table
 # ──────────────────────────────────────────────
 # Two steps:
-#   1. Create a CSV in data/my_table.csv with a header row + data rows.
+#   1. Create a CSV in tables/my_table.csv with a header row + data rows.
 #   2. Copy this file to the repo root as table_my_table.tf and update it.
 #
 # column_type values: STRING | NUMBER | BOOLEAN
@@ -10,7 +10,7 @@
 # The for_each key must be a column whose values are unique per row.
 
 locals {
-  my_table_rows = csvdecode(file("${path.module}/data/my_table.csv"))
+  my_table_rows = csvdecode(file("${path.module}/tables/my_table.csv"))
 }
 
 resource "google_chronicle_data_table" "my_table" {

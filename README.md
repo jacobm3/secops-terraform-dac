@@ -16,7 +16,7 @@ merge.
 ├── terraform.tfvars.example# Copy to terraform.tfvars and fill in your values
 ├── table_ip_allowlist.tf   # One table_*.tf file per data table
 ├── table_vuln_priority.tf
-├── data/                   # One CSV per table — the actual row data
+├── tables/                 # One CSV per table — the actual row data
 │   ├── ip_allowlist.csv
 │   └── vuln_priority.csv
 ├── rules.tf                # Rule config map + deployment settings
@@ -66,8 +66,8 @@ terraform apply
 
 ## Adding a new data table
 
-1. Create a CSV file in `data/` with a header row matching your column names.
-   For example, `data/my_table.csv`:
+1. Create a CSV file in `tables/` with a header row matching your column names.
+   For example, `tables/my_table.csv`:
    ```
    hostname,environment,owner
    web-01,production,sre-team
