@@ -1,6 +1,6 @@
 rule dac_login_from_blocked_country {
   meta:
-    author = "secops-team, claude code"
+    author = "secops-team"
     description = "Detects logins originating from countries on the block list."
     severity = "HIGH"
 

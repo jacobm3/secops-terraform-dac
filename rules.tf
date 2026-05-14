@@ -19,16 +19,16 @@ locals {
   rules = {
 
     dac_login_from_blocked_country = {
-      file      = "rules/dac_login_from_blocked_country.yaral"
+      file      = "rules/dac_login_from_blocked_country.yl2"
       enabled   = false
       alerting  = false
     }
 
-    #brute_force_login = {
-    #  file      = "rules/brute_force_login.yaral"
-    #  enabled   = true
-    #  alerting  = true
-    #}
+    dac_brute_force_login = {
+      file      = "rules/dac_brute_force_login.yl2"
+      enabled   = false
+      alerting  = false
+    }
 
     # ── Add new rules here ──────────────────────
     #

@@ -1,4 +1,4 @@
-rule brute_force_login {
+rule dac_brute_force_login {
   meta:
     author = "secops-team"
     description = "Detects more than 10 failed logins from a single IP within 5 minutes."
