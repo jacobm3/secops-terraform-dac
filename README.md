@@ -7,6 +7,16 @@ They let you enrich, filter, and correlate events in YARA-L rules. This repo kee
 definitions and their row data in version control, with CI/CD that plans on every PR and applies on
 merge.
 
+## YARA-L (YL2) detection rules
+
+This repo also manages your [YARA-L 2.0](https://cloud.google.com/chronicle/docs/detection/yara-l-2-0-overview)
+detection rules as code. YARA-L is the detection language used by Google SecOps to match patterns across
+normalized event data — single-event or multi-event correlation, time windows, and lookups into the
+data tables defined above. Rule source files live in `rules/` with a `.yl2` extension, and `rules.tf`
+controls per-rule deployment settings (enabled, alerting). The same PR workflow that plans/applies
+table changes also covers rules: edit a `.yl2` file, open a PR, merge to deploy. See
+[Adding a detection rule](#adding-a-detection-rule) below.
+
 ## Repository layout
 
 ```
