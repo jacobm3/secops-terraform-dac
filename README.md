@@ -1,4 +1,6 @@
-# Google SecOps Data Tables — Terraform
+# Google SecOps Detection as Code - Terraform
+
+## Data Tables
 
 Manage [Google Security Operations (SecOps) data tables](https://docs.cloud.google.com/chronicle/docs/investigation/data-tables) as code using Terraform.
 
