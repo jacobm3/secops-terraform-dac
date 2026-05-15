@@ -1,5 +1,9 @@
 # Google SecOps Detection as Code - Terraform
 
+Some portions of user-managed content in Google SecOps are covered by the [Google Terraform provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) and can be managed with gitops. This is referred to as "Detection as Code."  
+
+This repo includes Terraform code to manage custom detection rules and data tables with simple GitHub Actions pipelines.
+
 ## Data Tables
 
 Manage [Google Security Operations (SecOps) data tables](https://docs.cloud.google.com/chronicle/docs/investigation/data-tables) as code using Terraform.
