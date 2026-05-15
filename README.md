@@ -133,9 +133,14 @@ example for this.
 
 ## Terraform state
 
-By default state is stored locally. For a real team you should enable a
+By default state is stored locally. In production you should enable a
 [GCS backend](https://developer.hashicorp.com/terraform/language/backend/gcs).
 Uncomment the `backend "gcs"` block in `main.tf` and create the bucket first.
+
+Warning: Remote state is required with GitHub Actions or any other CI/CD pipeline
+approach. If remote state is not configured, the pipeline execution environment
+will not have the state file, causing Terraform to recreate all resources, 
+which will fail on data tables and create duplicate detection rules.
 
 ## Reference docs
 
