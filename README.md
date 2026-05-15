@@ -4,6 +4,8 @@ Some portions of user-managed content in Google SecOps are covered by the [Googl
 
 This repo includes Terraform code to manage custom detection rules and data tables with simple GitHub Actions pipelines.
 
+Most people use the google-beta provider because it has the broadest resource coverage and latest updates.
+
 ## Data Tables
 
 Manage [Google Security Operations (SecOps) data tables](https://docs.cloud.google.com/chronicle/docs/investigation/data-tables) as code using Terraform.
